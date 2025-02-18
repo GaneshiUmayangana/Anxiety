@@ -141,7 +141,7 @@ if page == "Prediction":
 
     with col1:
         school_type = st.selectbox("School Type", ["Below 500", "501-1500", "Above 1500"])
-        age = st.number_input("Age", min_value=10, max_value=18)
+        age = st.number_input("Age", min_value=14, max_value=18)
         religion = st.selectbox("Religion", ['Buddhism', 'Christianity / Catholicism', 'Islam', 'Hinduism'])
         distance = st.selectbox("Distance to School", ["Less than 2", "2 -5", "More than 5"])
         bmi = st.number_input("BMI", min_value=10.0, max_value=40.0, step=0.1)
