@@ -246,4 +246,3 @@ if st.session_state.sub_anxiety_prediction is not None:
         st.markdown(f"<h4 style='color: red; font-weight: bold;'>{predicted_text}</h4>", unsafe_allow_html=True)
     else:
         st.write("No specific sub-anxiety disorder predicted.")
-
