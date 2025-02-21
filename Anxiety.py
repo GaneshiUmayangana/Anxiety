@@ -128,7 +128,7 @@ if page == "Prediction":
     with open("encoder.pkl", "rb") as f:
         one_hot_encoder = pickle.load(f)
 
-    with open('multi_target_clf.pkl', 'rb') as model_file:
+    with open('multi_target_classifier(1).pkl', 'rb') as model_file:
         multi_model = pickle.load(model_file)
 
 
@@ -267,8 +267,8 @@ if page == "Prediction":
 
     if st.button("Predict Sub Anxiety Status"):
     # Make predictions with the multi-target classifier model
-        multi_prediction = multi_model.predict(features_encoded)[0]  # The first set of predictions (for one student)
-        multi_prediction_proba = multi_model.predict_proba(features_encoded)  # List of probability distributions
+        multi_prediction = multi_model.predict(np.array(features_encoded))[0]  # The first set of predictions (for one student)
+        multi_prediction_proba = multi_model.predict_proba(np.array(features_encoded) ) # List of probability distributions
 
     # Define the sub-anxiety labels
         sub_anxiety_labels = {
