@@ -24,7 +24,7 @@ if st.session_state.page == "Home":
     st.markdown("""
     <style>
         .stApp {
-            background-image: url('https://cdn.forumcomm.com/dims4/default/fd6e529/2147483647/strip/true/crop/5616x3744+0+0/resize/1680x1120!/format/webp/quality/90/?url=https%3A%2F%2Ffcc-cue-exports-brightspot.s3.us-west-2.amazonaws.com%2Fduluthnewstribune%2Fbinary%2Fanxiety_binary_4663312.jpg');
+            background-image: url('https://c1.wallpaperflare.com/preview/761/268/50/anxiety-fear-mystic-mystery.jpg');
             background-size: cover;
             background-position: center;
         } 
