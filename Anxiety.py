@@ -61,17 +61,17 @@ if st.session_state.page == "Home":
 """, unsafe_allow_html=True)
     
     # Display Header
-    st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
-    st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #4F8BF9;'>Student Anxiety Prediction</h1>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color: gray;'>Understand and manage student anxiety effectively</h3>", unsafe_allow_html=True)
 
-    # Add Columns for Layout
+# Add Columns for Layout
     col1, col2 = st.columns([1, 1])
 
 # Text Content
     with col1:
         st.markdown("""
-        <p class='content'>
-        Welcome to **Student Anxiety Prediction**, an AI-powered tool designed to help students assess and manage their anxiety levels.  
+        <p style='font-size:18px; text-align: justify;'>
+        Welcome to <b>Student Anxiety Prediction</b>, an AI-powered tool designed to help students assess and manage their anxiety levels.  
         <br><br>
         Anxiety is a common mental health issue affecting students globally, often due to academic pressure, social expectations, and personal challenges.  
         <br><br>
@@ -79,9 +79,9 @@ if st.session_state.page == "Home":
         </p>
         """, unsafe_allow_html=True)
 
-    # Image
+# Image
     with col2:
-        st.image("anxiety.jpg", use_container_width=True)
+        st.image("anxiety.jpg", use_container_width=True))
 
 
 if st.session_state.page == "Methodology":
