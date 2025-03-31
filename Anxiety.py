@@ -65,7 +65,7 @@ if st.session_state.page == "Home":
     st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
 
     # Add Columns for Layout
-    col1, col2 = st.columns([2, 1])
+    col1, col2 = st.columns([1, 1])
 
 # Text Content
     with col1:
