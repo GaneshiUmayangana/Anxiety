@@ -5,15 +5,15 @@ import numpy as np
 
 col1, col2 = st.columns([1,1])
     
-    if "page" not in st.session_state:
-        st.session_state.page = "Home"
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
     
-    with col1:
-        if st.button("Home", key="home_btn"):
-            st.session_state.page = "Home"
-    with col2:
-        if st.button("Prediction", key="prediction_btn"):
-            st.session_state.page = "Prediction"
+with col1:
+    if st.button("Home", key="home_btn"):
+        st.session_state.page = "Home"
+with col2:
+    if st.button("Prediction", key="prediction_btn"):
+        st.session_state.page = "Prediction"
 
 
 if st.session_state.page == "Home":
