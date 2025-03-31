@@ -40,7 +40,7 @@ if st.session_state.page == "Home":
         .subheader {
             text-align: center;
             font-size: 30px;
-            color: white;
+            color: #795548;
         }
         .content {
             font-size: 18px;
