@@ -3,85 +3,17 @@ import pickle
 import pandas as pd
 import numpy as np
 
-import streamlit as st
-
-# Page Configurations
-st.set_page_config(page_title="Student Anxiety Prediction", layout="wide")
-
-# Custom Styling
-st.markdown("""
-    <style>
-        .header {
-            text-align: center;
-            font-size: 50px;
-            font-weight: bold;
-            color: #F5E8C7;
-            background-color: #3E2723;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .subheader {
-            text-align: center;
-            font-size: 25px;
-            color: #BCAAA4;
-        }
-        .content {
-            font-size: 18px;
-            text-align: justify;
-            color: white;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .stButton>button {
-            font-size: 20px;
-            font-weight: bold;
-            width: 200px;
-            color: white;
-            background-color: #795548;
-            border-radius: 10px;
-            padding: 10px;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-# Display Header
-st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
-st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
-
-# Add Columns for Layout
-col1, col2 = st.columns([2, 1])
-
-# Text Content
-with col1:
-    st.markdown("""
-    <p class='content'>
-    Welcome to **Student Anxiety Prediction**, an AI-powered tool designed to help students assess and manage their anxiety levels.  
-    <br><br>
-    Anxiety is a common mental health issue affecting students globally, often due to academic pressure, social expectations, and personal challenges.  
-    <br><br>
-    This platform uses machine learning to analyze student responses and provide insights into their anxiety levels.
-    </p>
-    """, unsafe_allow_html=True)
-
-# Image
-with col2:
-    st.image("anxiety.jpg", use_column_width=True)
-
-# Navigation Buttons
-col1, col2, col3 = st.columns(3)
-with col1:
-    if st.button("🏠 Home"):
-        st.switch_page("Home.py")
-with col2:
-    if st.button("📖 Methodology"):
-        st.switch_page("Methodology.py")
-with col3:
-    if st.button("📊 Prediction"):
-        st.switch_page("Prediction.py")
+col1, col2 = st.columns([1,1])
+    
+    if "page" not in st.session_state:
+        st.session_state.page = "Home"
+    
+    with col1:
+        if st.button("Home", key="home_btn"):
+            st.session_state.page = "Home"
+    with col2:
+        if st.button("Prediction", key="prediction_btn"):
+            st.session_state.page = "Prediction"
 
 
 if st.session_state.page == "Home":
