@@ -70,7 +70,7 @@ if st.session_state.page == "Home":
     with col1:
         st.markdown("""
         <p style='font-size:18px; text-align: justify;'>
-        Welcome to <b>Student Anxiety Prediction</b>, an AI-powered tool designed to help students assess and manage their anxiety levels.  
+        Welcome to <b>Student Anxiety Prediction</b>, an this tool designed to help students, educational helpers assess and manage their anxiety levels.  
         <br><br>
         Anxiety is a common mental health issue affecting students globally, often due to academic pressure, social expectations, and personal challenges.  
         <br><br>
@@ -80,7 +80,7 @@ if st.session_state.page == "Home":
 
 # Image
     with col2:
-        st.image("anxiety.jpg", use_container_width=True)
+        st.image("anxiety.jpg", use_container_width=True, width=800)
 
 
 if st.session_state.page == "Methodology":
