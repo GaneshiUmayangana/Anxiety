@@ -41,6 +41,9 @@ if st.session_state.page == "Home":
             font-size: 18px;
             text-align: justify;
             color: white;
+            background-color: #2C2C2C; /* Example: Change the background color here */
+            padding: 20px;
+            border-radius: 10px;
         }
         .button-container {
             display: flex;
@@ -80,7 +83,7 @@ if st.session_state.page == "Home":
 
 # Image
     with col2:
-        st.image("anxiety.jpg", use_container_width=True, width=800)
+        st.image("anxiety.jpg", use_container_width=True, width=800,height=600)
 
 
 if st.session_state.page == "Methodology":
