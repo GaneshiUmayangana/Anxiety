@@ -3,9 +3,20 @@ import pickle
 import pandas as pd
 import numpy as np
 
-page = st.selectbox("Select a page", ["Home", "Prediction"])
+   # Creating a horizontal navigation bar with buttons
+col1, col2 = st.columns([1,1])
+    
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
+    
+with col1:
+    if st.button("Home", key="home_btn"):
+        st.session_state.page = "Home"
+with col2:
+    if st.button("Prediction", key="prediction_btn"):
+        st.session_state.page = "Prediction"
 
-if page == "Home":
+if st.session_state.page == "Home":
     st.markdown("""
         <style>
             .stApp {
