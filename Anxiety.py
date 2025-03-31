@@ -81,7 +81,7 @@ if st.session_state.page == "Home":
 
 # Image
     with col2:
-        st.image("anxiety.jpg", use_container_width=True))
+        st.image("anxiety.jpg", use_container_width=True)
 
 
 if st.session_state.page == "Methodology":
