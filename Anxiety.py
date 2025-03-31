@@ -3,9 +3,6 @@ import pickle
 import pandas as pd
 import numpy as np
 
-# Page Configurations
-st.set_page_config(page_title="Student Anxiety Prediction", layout="wide")
-
 
 col1, col2,col3 = st.columns([1,1,1])
     
