@@ -92,27 +92,27 @@ if st.session_state.page == "Home":
         st.image("anxiety.jpg", use_container_width=True, width=800)
         st.image("myanxiety.jpg", use_container_width=True, width=800)
         
-search_query = st.text_input("🔍 Search for anxiety-related topics:", "")        
-topics = {
-    "General Anxiety": "Anxiety is a natural response to stress, but when it becomes overwhelming, it can affect students' well-being.",
-    "Managing Anxiety Through Exercise": "Physical activity is a proven method for reducing anxiety levels by releasing endorphins and improving mental clarity.",
-    "Cognitive Behavioral Therapy (CBT)": "CBT is a structured therapy that helps individuals challenge negative thoughts and behaviors, improving mental health.",
-    "Mindfulness and Relaxation Techniques": "Mindfulness practices, such as meditation and deep breathing exercises, can help reduce anxiety and improve focus.",
-    "Anxiety and Academic Pressure": "Many students face anxiety due to academic pressures, balancing studies with social and extracurricular expectations."
-}
+    search_query = st.text_input("🔍 Search for anxiety-related topics:", "")        
+    topics = {
+        "General Anxiety": "Anxiety is a natural response to stress, but when it becomes overwhelming, it can affect students' well-being.",
+        "Managing Anxiety Through Exercise": "Physical activity is a proven method for reducing anxiety levels by releasing endorphins and improving mental clarity.",
+        "Cognitive Behavioral Therapy (CBT)": "CBT is a structured therapy that helps individuals challenge negative thoughts and behaviors, improving mental health.",
+        "Mindfulness and Relaxation Techniques": "Mindfulness practices, such as meditation and deep breathing exercises, can help reduce anxiety and improve focus.",
+        "Anxiety and Academic Pressure": "Many students face anxiety due to academic pressures, balancing studies with social and extracurricular expectations."
+    }
 
 # Function to simulate search logic
-def search_topics(query):
-    results = {key: value for key, value in topics.items() if query.lower() in key.lower() or query.lower() in value.lower()}
-    return results
-if search_query:
-        results = search_topics(search_query)
-        if results:
-            st.markdown(f"**Search Results for:** `{search_query}`")
-            for topic, description in results.items():
-                st.write(f"**{topic}**: {description}")
-        else:
-            st.write("No results found for your search query. Please try again with different keywords.")
+    def search_topics(query):
+        results = {key: value for key, value in topics.items() if query.lower() in key.lower() or query.lower() in value.lower()}
+        return results
+    if search_query:
+            results = search_topics(search_query)
+            if results:
+                st.markdown(f"**Search Results for:** `{search_query}`")
+                for topic, description in results.items():
+                    st.write(f"**{topic}**: {description}")
+            else:
+                st.write("No results found for your search query. Please try again with different keywords.")
 
 
 if st.session_state.page == "Methodology":
