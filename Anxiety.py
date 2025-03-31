@@ -16,7 +16,7 @@ with col1:
     if st.button("🏠 Home", key="home_btn"):
         st.session_state.page = "Home"
 with col2:
-    if st.button("📖 Methodology", key="home_btn"):
+    if st.button("📖 Methodology", key="methodology_btn"):
         st.session_state.page = "Methodology"        
 with col3:
     if st.button("📊 Prediction", key="prediction_btn"):
