@@ -81,7 +81,7 @@ if st.session_state.page == "Home":
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     """, unsafe_allow_html=True)
 
-if page == "Prediction":
+if st.session_state.page == "Prediction":
     st.markdown("""
     <style>
         .stApp {
