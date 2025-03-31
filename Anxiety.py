@@ -3,20 +3,73 @@ import pickle
 import pandas as pd
 import numpy as np
 
-col1, col2 = st.columns([1,1])
+# Page Configurations
+st.set_page_config(page_title="Student Anxiety Prediction", layout="wide")
+
+
+col1, col2,col3 = st.columns([1,1,1])
     
 if "page" not in st.session_state:
     st.session_state.page = "Home"
     
 with col1:
-    if st.button("Home", key="home_btn"):
+    if st.button("🏠 Home", key="home_btn"):
         st.session_state.page = "Home"
 with col2:
-    if st.button("Prediction", key="prediction_btn"):
+    if st.button("📖 Methodology", key="home_btn"):
+        st.session_state.page = "Methodology"        
+with col3:
+    if st.button("📊 Prediction", key="prediction_btn"):
         st.session_state.page = "Prediction"
 
 
 if st.session_state.page == "Home":
+    st.markdown("""
+    <style>
+        .header {
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            color: #F5E8C7;
+            background-color: #3E2723;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .subheader {
+            text-align: center;
+            font-size: 25px;
+            color: #BCAAA4;
+        }
+        .content {
+            font-size: 18px;
+            text-align: justify;
+            color: white;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .stButton>button {
+            font-size: 20px;
+            font-weight: bold;
+            width: 200px;
+            color: white;
+            background-color: #795548;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Display Header
+st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
+st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
+
+
+
+if st.session_state.page == "Methodology":
     st.markdown("""
         <style>
             .stApp {
