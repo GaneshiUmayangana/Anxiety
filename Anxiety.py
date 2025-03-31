@@ -69,7 +69,7 @@ with col1:
 
 # Image
 with col2:
-    st.image("image.png", use_column_width=True)
+    st.image("anxiety.jpg", use_column_width=True)
 
 # Navigation Buttons
 col1, col2, col3 = st.columns(3)
