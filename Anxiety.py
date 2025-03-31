@@ -23,6 +23,11 @@ with col3:
 if st.session_state.page == "Home":
     st.markdown("""
     <style>
+        .stApp {
+            background-image: url('https://img.freepik.com/free-vector/vintage-woman-flowers-outline_53876-99109.jpg');
+            background-size: cover;
+            background-position: center;
+        } 
         .header {
             text-align: center;
             font-size: 50px;
