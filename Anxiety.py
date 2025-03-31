@@ -71,7 +71,7 @@ if st.session_state.page == "Home":
     # Display Header
     st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
     st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
-    search_query = st.text_input("🔍 Search for anxiety-related topics:", "")
+    
 # Add Columns for Layout
     col1, col2 = st.columns([1, 1])
 
@@ -91,9 +91,11 @@ if st.session_state.page == "Home":
     with col2:
         st.image("anxiety.jpg", use_container_width=True, width=800)
         st.image("myanxiety.jpg", use_container_width=True, width=800)
+search_query = st.text_input("🔍 Search for anxiety-related topics:", "")        
 if search_query:
         st.markdown(f"**Search Results for:** `{search_query}`")
         st.write("🔎 Displaying related information here... (Customize this section)")
+
 
 if st.session_state.page == "Methodology":
     st.markdown("""
