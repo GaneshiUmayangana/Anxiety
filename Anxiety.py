@@ -24,7 +24,7 @@ if st.session_state.page == "Home":
     st.markdown("""
     <style>
         .stApp {
-            background-image: url('https://img.freepik.com/free-vector/vintage-woman-flowers-outline_53876-99109.jpg');
+            background-image: url('myanxiety.jpg');
             background-size: cover;
             background-position: center;
         } 
