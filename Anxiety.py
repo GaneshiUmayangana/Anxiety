@@ -59,8 +59,7 @@ if st.session_state.page == "Home":
         }
     </style>
 """, unsafe_allow_html=True)
-
-# Display Header
+    # Display Header
 st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
 st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
 
