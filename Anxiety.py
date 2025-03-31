@@ -61,9 +61,8 @@ if st.session_state.page == "Home":
 """, unsafe_allow_html=True)
     
     # Display Header
-    st.markdown("<h1 style='text-align: center; color: #4F8BF9;'>Student Anxiety Prediction</h1>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center; color: gray;'>Understand and manage student anxiety effectively</h3>", unsafe_allow_html=True)
-
+    st.markdown("<div class='header'>Student Anxiety Prediction</div>", unsafe_allow_html=True)
+    st.markdown("<div class='subheader'>Understand and manage student anxiety effectively</div>", unsafe_allow_html=True)
 # Add Columns for Layout
     col1, col2 = st.columns([1, 1])
 
