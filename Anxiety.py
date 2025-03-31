@@ -39,8 +39,8 @@ if st.session_state.page == "Home":
         }
         .subheader {
             text-align: center;
-            font-size: 25px;
-            color: #BCAAA4;
+            font-size: 30px;
+            color: white;
         }
         .content {
             font-size: 18px;
