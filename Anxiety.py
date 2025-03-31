@@ -81,7 +81,7 @@ with col1:
 
 # Image
 with col2:
-    st.image("anxiety.jpg", use_column_width=True)
+    st.image("anxiety.jpg", use_container_width=True)
 
 
 if st.session_state.page == "Methodology":
